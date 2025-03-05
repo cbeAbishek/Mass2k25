@@ -155,8 +155,10 @@ body {
 
 .btn--full:link,
 .btn--full:visited {
+  width: 150px;
   background-color: #da4c22;
   color: #fff;
+  text-align: center;
 }
 
 .btn--full:active,
