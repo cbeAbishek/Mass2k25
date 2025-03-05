@@ -756,6 +756,50 @@
   );
   box-shadow: 0 2.4rem 3.6rem rgba(0, 0, 0, 0.15);
 }
+.btn--form {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  
+  /* Gradient Background */
+  background: linear-gradient(90deg, #ff5733, #951b45);
+  background-size: 200% 200%;
+  color: white;
+  
+  /* Box Shadow */
+  box-shadow: 0 4px 10px rgba(149, 27, 69, 0.3);
+  
+  /* Animation */
+  animation: gradientMove 4s infinite alternate;
+}
+
+/* Hover Effect */
+.btn--form:hover {
+  background: linear-gradient(90deg, #951b45, #ff5733);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(149, 27, 69, 0.5);
+}
+
+/* Active Effect */
+.btn--form:active {
+  transform: scale(0.98);
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 
 .cta-text-box {
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
@@ -764,7 +808,7 @@
 
 .cta-heading {
   color: inherit;
-  margin-bottom: 3.2rem;
+  /* margin-bottom: 3.2rem; */
 }
 
 .cta-description {

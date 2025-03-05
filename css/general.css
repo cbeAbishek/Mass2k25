@@ -100,7 +100,7 @@ body {
 .heading-primary,
 .heading-secondary,
 .heading-teriary {
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
   letter-spacing: -0.5px;
 }
@@ -109,11 +109,12 @@ body {
   font-size: 5.2rem;
   line-height: 1.05;
   margin-bottom: 3.2rem;
+  margin-top: 3.2rem;
 }
 
 .heading-secondary {
   font-size: 4.4rem;
-  margin-bottom: 9.6rem;
+  margin-bottom: 9.6rem;margin-top: 9.6rem;
   line-height: 1.2;
 }
 
@@ -125,13 +126,35 @@ body {
 
 .subheading {
   display: block;
-  font-size: 1.6rem;
+  font-size: 5rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: #951b45;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
+
+  /* Gradient Text Effect */
+  background: linear-gradient(90deg, #951b45, #ff5733, #951b45);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animation */
+  animation: gradientMove 3s infinite linear;
 }
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .btn,
 .btn:link,
