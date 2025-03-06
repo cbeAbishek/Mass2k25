@@ -1001,17 +1001,17 @@
 }
 
 .name {
-  font-size: 1.3rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 5px;
   @media only screen and (max-width: 600px) {
-    font-size: 2.5rem;
+    font-size: 5rem;
   }
 }
 
 .position {
-  font-size: 1rem;
+  font-size: 2rem;
   color: #666;
   @media only screen and (max-width: 600px) {
     font-size: 2.5rem;
@@ -1031,11 +1031,10 @@
 }
 
 .dynamic-header {
-  font-size: 5rem;
-  justify-content: center;
+  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #e07362;
+  color: #f83535;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -1043,6 +1042,7 @@
   animation: waveText 3s infinite linear;
   margin-top: 50px;
   margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(15, 0, 0, 0.49);
 }
 
 @keyframes waveText {
@@ -1060,10 +1060,6 @@
   }
 }
 
-/* Glow effect */
-.dynamic-header {
-  text-shadow: 1px 4px 5px rgba(15, 0, 0, 0.49);
-}
 .containerdown{
   padding-top: 100px;
   display: grid;
