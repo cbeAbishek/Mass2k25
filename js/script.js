@@ -99,4 +99,12 @@ document.querySelector(".btn--full").addEventListener("click", function (event) 
 document.querySelector(".btn--form").addEventListener("click", function () {
   window.open("https://fine-arts-club.formaloo.co/mass2k25", "_blank");
 });
+// portfolio button
+document.getElementById("abishek-link").addEventListener("click", function () {
+  window.open("https://cbeabishek.github.io/Abishek-portfoilio/", "_blank");
+});
+
+document.getElementById("sarran-link").addEventListener("click", function () {
+  window.open("https://sarran528.github.io/portfolio/", "_blank");
+});
 
