@@ -80,3 +80,31 @@ function checkFlexGap() {
 checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
+// register button nav
+document.querySelector(".nav-cta").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default behavior
+  window.open("https://fine-arts-club.formaloo.co/mass2k25", "_blank");
+});
+
+
+// register button hero
+
+document.querySelector(".btn--full").addEventListener("click", function (event) {
+  event.preventDefault();
+  window.open("https://fine-arts-club.formaloo.co/mass2k25", "_blank");
+});
+
+// register button footer
+document.querySelector(".btn--form").addEventListener("click", function () {
+  window.open("https://fine-arts-club.formaloo.co/mass2k25", "_blank");
+});
+// portfolio button
+document.getElementById("abishek-link").addEventListener("click", function () {
+  window.open("https://cbeabishek.github.io/Abishek-portfoilio/", "_blank");
+});
+
+document.getElementById("sarran-link").addEventListener("click", function () {
+  window.open("https://sarran528.github.io/portfolio/", "_blank");
+});
+
