@@ -76,6 +76,9 @@
             <a href="#testimonials" class="main-nav-link">Gallery</a>
           </li>
           <li>
+            <a href="#Coordinators" class="main-nav-link">Coordinators</a>
+          </li>
+          <li>
             <a href="https://fine-arts-club.formaloo.co/mass2k25" target="_blank" class="main-nav-link nav-cta">
               Register
             </a>
@@ -185,6 +188,12 @@
         </div>
         <div class="step-img-box">
           <img src="img/app/3.gif" class="steps-img" alt="App Screanshot - step 3" />
+        </div>
+        <div class="Counterpat">
+          <h1>
+            <div class="counter" id="counter">0</div>
+            Number of participants Still Now
+          </h1>
         </div>
       </div>
     </section>
@@ -422,7 +431,7 @@
           <div class="cta-img-box" role="img" aria-label="Woman performing contemporary dance"></div>
         </div>
         <br><br>
-        <h1 class="dynamic-header">Std-Coordinators</h1>
+        <h1 class="dynamic-header" id="Coordinators">Std-Coordinators</h1>
         <div class="container1">
           <div class="coordinator-card">
             <div class="image-container">
@@ -459,7 +468,7 @@
               <img src="img/students/agri.jpg" alt="Coordinator Image">
             </div>
             <div class="info">
-              <div class="name">Kishor</div>
+              <div class="name">Kishore</div>
               <div class="position"> Agri Department <br><a href="tel:+918778448102">8778448102</a> </div>
             </div>
           </div>
@@ -555,6 +564,26 @@
   </footer>
 
   <script>
+    function animateCounter(target, duration) {
+      let start = 0;
+      const increment = target / (duration / 16);
+
+      function updateCounter() {
+        start += increment;
+        if (start < target) {
+          document.getElementById("counter").textContent = Math.floor(start);
+          requestAnimationFrame(updateCounter);
+        } else {
+          document.getElementById("counter").textContent = target;
+        }
+      }
+      requestAnimationFrame(updateCounter);
+    }
+
+    animateCounter(5, 1000); // Change 100 to any fixed number, 2000 is duration in ms
+  </script>
+
+  <script>
     function updateCountdown() {
       let eventDate = new Date("March 14, 2025 13:00:00").getTime();
       let now = new Date().getTime();
@@ -570,6 +599,7 @@
     }
     setInterval(updateCountdown, 1000);
   </script>
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

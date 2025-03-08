@@ -1,6 +1,7 @@
 /**********************************/
 /* HEADER */
 /**********************************/
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 .header {
   max-width: 100%;
@@ -1103,4 +1104,69 @@
   font-weight: bold;
   margin-top: 20px;
   color: #da4c22;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+.counter {
+  /* font-size: 10rem;
+  font-weight: bold;
+  color: #333; */
+
+  /* font-size: 50px;
+  font-weight: bold;
+  color: rgb(0, 131, 131);
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  font-family: 'Arial', sans-serif; */
+
+  /* font-size: 50px;
+  font-weight: bold;
+  color: #222;
+  text-shadow: 3px 3px 0px #999, -3px -3px 0px #fff;
+  font-family: 'Arial', sans-serif; */
+  
+  /* font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff3960, #e62200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Arial', sans-serif; */
+
+  font-size: 15rem;
+  color: #ff7300;
+  animation: float 2s ease-in-out infinite;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Counterpat{
+  text-align: left;
+  font-size: 2rem;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+@keyframes changeFont {
+  0% { font-family: 'Arial', sans-serif; }
+  25% { font-family: 'Courier New', monospace; }
+  50% { font-family: 'Georgia', serif; }
+  75% { font-family: 'Verdana', sans-serif; }
+  100% { font-family: 'Arial', sans-serif; } /* Loop back */
+}
+.Counterpat h1{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff5722;
+  animation: changeFont 3s infinite alternate;
+  @media (max-width: 768px){
+    font-size: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .counter {
+      font-size: 15rem;
+      text-align: center;
+  }
 }
