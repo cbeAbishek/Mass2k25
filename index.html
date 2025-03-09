@@ -588,7 +588,7 @@
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          animateCounter(5, 1000);
+          animateCounter(14, 1500);
           observer.disconnect(); // Stop observing once animation starts
         }
       });
