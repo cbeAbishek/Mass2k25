@@ -502,11 +502,11 @@
           </div>
           <div class="coordinator-card">
             <div class="image-container">
-              <img src="img/students/hannah.jpg" alt="Coordinator Image">
+              <img src="img/students/ds.jpg" alt="Coordinator Image">
             </div>
             <div class="info">
-              <div class="name">Pending</div>
-              <div class="position"> AI & DS Department <br><a href="tel:+91"></a> </div>
+              <div class="name">Aswin</div>
+              <div class="position"> AI & DS Department <br><a href="tel:+919361062872">9361062872</a> </div>
             </div>
           </div>
         </div>
@@ -563,26 +563,39 @@
     </div>
   </footer>
 
+  <div id="counter-container">
+    <span id="counter">0</span>
+  </div>
+  
   <script>
     function animateCounter(target, duration) {
       let start = 0;
       const increment = target / (duration / 16);
-
+      const counterElement = document.getElementById("counter");
+  
       function updateCounter() {
         start += increment;
         if (start < target) {
-          document.getElementById("counter").textContent = Math.floor(start);
+          counterElement.textContent = Math.floor(start);
           requestAnimationFrame(updateCounter);
         } else {
-          document.getElementById("counter").textContent = target;
+          counterElement.textContent = target;
         }
       }
       requestAnimationFrame(updateCounter);
     }
-
-    animateCounter(5, 1000); // Change 100 to any fixed number, 2000 is duration in ms
+      
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(5, 1000);
+          observer.disconnect(); // Stop observing once animation starts
+        }
+      });
+    }, { threshold: 0.5 });
+    observer.observe(document.getElementById("counter"));
   </script>
-
+  
   <script>
     function updateCountdown() {
       let eventDate = new Date("March 14, 2025 13:00:00").getTime();
