@@ -1,10 +1,14 @@
-# Step 1: Use the official Nginx image from Docker Hub
+# Use an official Nginx image
 FROM nginx:alpine
 
-# Step 2: Copy the site files into the Nginx web server directory
-COPY . /usr/share/nginx/html
+# Remove default nginx static assets
+RUN rm -rf /usr/share/nginx/html/*
 
-# Step 3: Expose port 80 to allow access to the site
-EXPOSE 5000
+# Copy your HTML frontend files into nginx html directory
+COPY ./frontend/ /usr/share/nginx/html/
 
-# Step 4: Nginx will automatically serve the site, no need for a command
+# Expose port 80
+EXPOSE 3000
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
